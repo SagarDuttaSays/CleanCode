@@ -1,0 +1,43 @@
+//review1
+//remove deep nesting of conditional statements. 
+Function IsShopOpen(day)
+    If day is empty or null
+	Return false
+        Convert day to lowercase
+        Set openDays to ["friday", "saturday", "sunday"]
+        
+        If day is in openDays
+            Return True
+        Else
+            Return False
+End Function
+
+//review3
+//remove deep nesting of conditional statements. remove separate if-else conditions for 0 and 1.
+
+Function Fibonacci(n)
+    If n >= 50
+        Throw Exception("Not supported")
+    
+    If n == 0
+        Return 0
+    
+    If n == 1
+        Return 1
+    
+    Return Fibonacci(n - 1) + Fibonacci(n - 2)
+End Function
+
+
+//review4
+//array type is not specified and name is not meaningful. similarly the methods names are not meaningful.
+
+
+//review5
+//no magic number allowed. use constants.
+
+//review6
+//Already class name explains the context we don't want to keep prefix car.
+
+//review9
+//pass the string value as default parameter

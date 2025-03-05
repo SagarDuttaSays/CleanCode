@@ -1,5 +1,5 @@
 //review1
-//remove deep nesting of conditional statements. 
+//remove deep nesting of conditional statements. Refer to below pseudocode: 
 Function IsShopOpen(day)
     If day is empty or null
 	Return false
@@ -13,7 +13,7 @@ Function IsShopOpen(day)
 End Function
 
 //review3
-//remove deep nesting of conditional statements. remove separate if-else conditions for 0 and 1.
+//remove deep nesting of conditional statements. remove separate if-else conditions for 0 and 1. Refer to below pseudocode:
 
 Function Fibonacci(n)
     If n >= 50
@@ -28,10 +28,8 @@ Function Fibonacci(n)
     Return Fibonacci(n - 1) + Fibonacci(n - 2)
 End Function
 
-
 //review4
-//array type is not specified and name is not meaningful. similarly the methods names are not meaningful.
-
+//array type is not specified and name (use something like "location") is not meaningful. similarly the methods names are not meaningful.
 
 //review5
 //no magic number allowed. use constants.

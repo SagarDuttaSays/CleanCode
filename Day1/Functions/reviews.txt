@@ -1,17 +1,24 @@
 //review1
-//SRP is violated. method is deviated from its actual purpose, thereby creating side effects. no need to initialize session inside this method.
+//SRP is violated. 
+//method is deviated from its actual purpose, thereby creating side effects. 
+//no need to initialize session inside this method.
 
 //review2
-//reduce the scope of the name variable. no need to make it global. 
+//reduce the scope of the name variable. 
+//no need to make it global. 
 
 //review3
 //simplify method name and avoid using ! operator. 
 
 //review4
-//string variable name is not following naming convention guidelines. method is not returning what is expected from it, hence producing side effects and SRP violated. default block is missing. use Polymorphism to reduce multiple conditional checks.
+//string variable name is not following naming convention guidelines. 
+//method is not returning what is expected from it, hence producing side effects and SRP violated. 
+//default block is missing. use Polymorphism to reduce multiple conditional checks.
 
 //review5
-//else block is missing. vehicle.GetType() is cannot be used. store its value in one place and then use it wherever needed. return statement missing. 
+//else block is missing. 
+//vehicle.GetType() is cannot be used. store its value in one place and then use it wherever needed. 
+//return statement missing. 
 
 //review6
 //break it into two separate methods to remove bool parameter.
@@ -23,7 +30,8 @@
 //reduce the number of parameters passed in the method definition.
 
 //review9
-//the function is doing more than its expected behavior, hence violating the SRP principle. Shift client state (active or not) to a separate method.
+//the function is doing more than its expected behavior, hence violating the SRP principle. 
+//Shift client state (active or not) to a separate method.
 
 //review10
 //method name "Handle" unclear. seems SendMail is a local method in Email class, so what is the need of a separate method "Handle".

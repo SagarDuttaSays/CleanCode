@@ -1,0 +1,80 @@
+//review1
+//SRP is violated. method is deviated from its actual purpose, thereby creating side effects. no need to initialize session inside this method.
+
+//review2
+//reduce the scope of the name variable. no need to make it global. 
+
+//review3
+//simplify method name and avoid using ! operator. 
+
+//review4
+//string variable name is not following naming convention guidelines. method is not returning what is expected from it, hence producing side effects and SRP violated. default block is missing. use Polymorphism to reduce multiple conditional checks.
+
+//review5
+//else block is missing. vehicle.GetType() is cannot be used. store its value in one place and then use it wherever needed. return statement missing. 
+
+//review6
+//break it into two separate methods to remove bool parameter.
+
+//review7
+//use singleton on need basis. difficult to test and mock. 
+
+//review8
+//reduce the number of parameters passed in the method definition.
+
+//review9
+//the function is doing more than its expected behavior, hence violating the SRP principle. Shift client state (active or not) to a separate method.
+
+//review10
+//method name "Handle" unclear. seems SendMail is a local method in Email class, so what is the need of a separate method "Handle".
+
+//review11
+//The cognitive complexity of this code is high because it includes multiple conditional checks, database queries, and nested logic, which can be hard to follow.
+//The function handles too many responsibilities, such as validating input, interacting with the database, managing business logic, and generating URLs. This should be refactored by breaking down the functionality into smaller, more focused helper functions or methods. 
+// the error handling and database commits could be separated into distinct functions for clarity and maintainability.
+//Refer the below pseudocode:
+Function newCredential(templateID=None):
+    Get 'name' from request
+    If name is invalid:
+        Return bad request error
+
+    Get 'template_ID' from request
+    If templateID is invalid:
+        Return bad request error
+
+    Get current institution from current user
+
+    Fetch the badge template from the database based on institution and templateID
+    If badge template does not belong to the current institution:
+        Return unauthorized error
+
+    If institution has enough credits:
+        Generate a unique ID for the credential
+        Create new Badge object with name, uniqueID, and badge template
+        Set additional attributes (email, text, license number, etc.)
+
+        If email is provided but verify mode is not set:
+            Set verify mode to 'Email ID' and set verify code
+
+        Save Badge and update institution credits
+
+        Create Badge Baker object and bake the badge
+
+        Commit changes to the database
+
+        Return a JSON response with credential URL, image, name, institution, etc.
+
+    Else:
+        Return bad request error for insufficient balance
+
+    Return unauthorized error for insufficient permissions
+
+
+//review12
+//dont use magic string
+
+//review13
+//remove old and unused blocks of code.
+
+
+

@@ -1,43 +1,20 @@
 //review1
-//remove deep nesting of conditional statements. 
-Function IsShopOpen(day)
-    If day is empty or null
-	Return false
-        Convert day to lowercase
-        Set openDays to ["friday", "saturday", "sunday"]
-        
-        If day is in openDays
-            Return True
-        Else
-            Return False
-End Function
+//variable name is not meaningful. use something like "elapsedTimeInDays"
+
+//review2
+//avoid using var type. 'db' variable name is not meaningful. GetFromService name is not meaningful, use something like "GetEmployeesFromService". do NOT expose the database handling methods directly, use some service class instead.
 
 //review3
-//remove deep nesting of conditional statements. remove separate if-else conditions for 0 and 1.
-
-Function Fibonacci(n)
-    If n >= 50
-        Throw Exception("Not supported")
-    
-    If n == 0
-        Return 0
-    
-    If n == 1
-        Return 1
-    
-    Return Fibonacci(n - 1) + Fibonacci(n - 2)
-End Function
-
+//no need to specify datatype in variable names
 
 //review4
-//array type is not specified and name is not meaningful. similarly the methods names are not meaningful.
-
+//parameter names not valid. avoid using 'p' for pointers
 
 //review5
-//no magic number allowed. use constants.
+//inconsistent casing convention followed. Adhere to the guidelines specified for the project.
 
 //review6
-//Already class name explains the context we don't want to keep prefix car.
+//Employee class properties do not have meaningful names
 
-//review9
-//pass the string value as default parameter
+//review7
+//method parameters are not following naming convention. Adhere to the guidelines specified for the project.
